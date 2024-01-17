@@ -84,12 +84,35 @@
             Para solucionar esto, utilizamos los servidores remotos: un nuevo estado que deben seguir nuestros archivos
             para conectarse y trabajar con equipos de cualquier parte del mundo.
         </p>
-<h4>Comandos para trabajo remoto co Git</h4>
-<p> - <u>Git clone url_del_servidor_remoto</u> : Nos permite descargar los archivos de la última versión de la rama principal y todo el historial de cambios en la carpeta .git. <br>
-- <u>Git push</u>: Luego de hacer git add y git commit debemos ejecutar este comando para mandar los cambios al servidor remoto. <br>
--  <u>Git fetch</u>: Lo usamos para traer actualizaciones del servidor remoto y guardarlas en nuestro repositorio local (en caso de que hayan, por supuesto). <br>
-- <u>Git merge</u>: También usamos el comando git merge con servidores remotos. Lo necesitamos para combinar los últimos cambios del servidor remoto y nuestro directorio de trabajo. <br>
-- <u>Git pull</u>: Básicamente, git fetch y git merge al mismo tiempo.</p>
+        <h4>Comandos para trabajo remoto co Git</h4>
+        <p> - <u>Git clone url_del_servidor_remoto</u> : Nos permite descargar los archivos de la última versión de la
+            rama principal y todo el historial de cambios en la carpeta .git. <br>
+            - <u>Git push</u>: Luego de hacer git add y git commit debemos ejecutar este comando para mandar los cambios
+            al servidor remoto. <br>
+            - <u>Git fetch</u>: Lo usamos para traer actualizaciones del servidor remoto y guardarlas en nuestro
+            repositorio local (en caso de que hayan, por supuesto). <br>
+            - <u>Git merge</u>: También usamos el comando git merge con servidores remotos. Lo necesitamos para combinar
+            los últimos cambios del servidor remoto y nuestro directorio de trabajo. <br>
+            - <u>Git pull</u>: Básicamente, git fetch y git merge al mismo tiempo.</p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 15 - Introducción a las ramas o branches de Git</h3>
+        <p>Las ramas (branches) son la forma de hacer cambios en nuestro proyecto sin afectar el flujo de trabajo de la
+            rama principal. Esto porque queremos trabajar una parte muy específica de la aplicación o simplemente
+            experimentar.</p>
+        <h4>Cómo funcionan las ramas en GIT</h4>
+        <p>- git branch -nombre de la rama-: Con este comando se genera una nueva rama. <br>
+
+            - git checkout -nombre de la rama-: Con este comando puedes saltar de una rama a otra. <br>
+
+            - git checkout -b rama: Genera una rama y nos mueve a ella automáticamente, Es decir, es la combinación de
+            git branch y git checkout al mismo tiempo. <br>
+
+            - git reset id-commit: Nos lleva a cualquier commit no importa la rama, ya que identificamos el id del tag.,
+            eliminando el historial de los commit posteriores al tag seleccionado. <br>
+
+            - git checkout rama-o-id-commit: Nos lleva a cualquier commit sin borrar los commit posteriores al tag
+            seleccionado.</p>
     </div>
 
 </body>
