@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APUNTES</title>
+    <link rel="stylesheet" href="css/estilosApuntes.css">
 
 </head>
 
 <body>
     <h1>Curso Profesional de Git y GitHub</h1>
     <div>
-        <h3> Clase 11 - ¿Qué es branch (rama) y cómo funciona un Merge en Git?</h3>
+        <h3 class="subtitulos"> Clase 11 - ¿Qué es branch (rama) y cómo funciona un Merge en Git?</h3>
         <p>Una rama o branch es una version del codigo del proyecto sobre el que se esta trabajando estas ramas ayudan a
             mantener el orden en el control de versiones y manipular codigo de forma segura</p>
         <h4>Clases de ramas (branch)</h4>
@@ -25,7 +26,7 @@
         </p>
     </div>
     <div>
-        <h3>Clase 12 - Volver en el tiempo en nuestro repositorio utilizando reset y checkout</h3>
+        <h3 class="subtitulos">Clase 12 - Volver en el tiempo en nuestro repositorio utilizando reset y checkout</h3>
         <p>El comando <u> Git checkout </u> + <u> ID del commit </u> nos permite viajar en el tiempo. Podemos volver a
             cualquier
             version anterior de un archivo especifico o incluso del proyecto entero </p>
@@ -40,7 +41,7 @@
         </p>
     </div>
     <div>
-        <h3>Clase 14 - Git reset vs Git rm</h3>
+        <h3 class="subtitulos">Clase 13 - Git reset vs Git rm</h3>
         <h4>Git reset</h4>
         <p>El comando git reset es una herramienta poderosa que te permite deshacer o revertir cambios en tu repositorio
             de Git. Lo puedes ejecutar de tres maneras diferentes,
@@ -60,7 +61,8 @@
             duro. Deja de trackear el historial de cambios de estos archivos, por lo que quedan en estado untracked.
             <br>
             git rm --force: Elimina los archivos de Git y del disco duro. Git guarda todo, por lo que podemos recuperar
-            archivos eliminados si es necesario (empleando comandos avanzados).</p>
+            archivos eliminados si es necesario (empleando comandos avanzados).
+        </p>
 
         <h4>Resumen</h4>
         <p>
@@ -74,6 +76,22 @@
             repositorio con los últimos cambios en los que hicimos commit. Así, no perdemos nada relevante.
         </p>
     </div>
+    <div>
+        <h3 class="subtitulos">Clase 14 - Flujo de trabajo basico con un repositorio remoto</h3>
+        <p>Cuando empiezas a trabajar en un entorno local, el proyecto vive únicamente en tu computadora. Esto significa
+            que no hay forma de que otros miembros del equipo trabajen en él. <br>
+            <br>
+            Para solucionar esto, utilizamos los servidores remotos: un nuevo estado que deben seguir nuestros archivos
+            para conectarse y trabajar con equipos de cualquier parte del mundo.
+        </p>
+<h4>Comandos para trabajo remoto co Git</h4>
+<p> - <u>Git clone url_del_servidor_remoto</u> : Nos permite descargar los archivos de la última versión de la rama principal y todo el historial de cambios en la carpeta .git. <br>
+- <u>Git push</u>: Luego de hacer git add y git commit debemos ejecutar este comando para mandar los cambios al servidor remoto. <br>
+-  <u>Git fetch</u>: Lo usamos para traer actualizaciones del servidor remoto y guardarlas en nuestro repositorio local (en caso de que hayan, por supuesto). <br>
+- <u>Git merge</u>: También usamos el comando git merge con servidores remotos. Lo necesitamos para combinar los últimos cambios del servidor remoto y nuestro directorio de trabajo. <br>
+- <u>Git pull</u>: Básicamente, git fetch y git merge al mismo tiempo.</p>
+    </div>
+
 </body>
 
 </html>
