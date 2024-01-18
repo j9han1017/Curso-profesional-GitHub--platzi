@@ -114,6 +114,32 @@
             - git checkout rama-o-id-commit: Nos lleva a cualquier commit sin borrar los commit posteriores al tag
             seleccionado.</p>
     </div>
+    <div>
+        <h3 class="subtitulos">Clase 16 - Fusión de ramas con Git merge</h3>
+        <p>La fusión en Git es la forma en que este sistema une un historial bifurcado. El comando git merge permite
+            integrar líneas de desarrollo independientes generadas por git branch en una sola rama. Con este comando,
+            podemos crear un nuevo commit que combina dos ramas o branches: la rama actual y la rama que se indica
+            después del comando. <br>
+            <br>
+            Estos comandos de fusión del merge afectan solo a la rama actual y no a la rama de destino. Por lo tanto, te
+            recomendamos utilizar git checkout para seleccionar la rama actual y git branch -d para eliminar la rama de
+            destino obsoleta.
+        </p>
+        <h4>Funcionamiento de Git merge</h4>
+        <p>Git merge fusiona secuencias de confirmaciones en un solo historial, generalmente para combinar dos ramas.
+            Busca una confirmación de base común y genera una confirmación de fusión que representa la combinación de
+            las dos ramas hasta el resultado final.</p>
+
+        <h4>¿Cómo unir dos ramas en git?</h4>
+        <p>Ahora bien, para combinar ramas en tu repositorio local, usa git checkout para cambiar a la rama donde deseas
+            fusionar. Por lo general, esta es la rama principal. Luego, emplea git merge y especifica el nombre de la
+            otra rama que deseas traer a esta rama. Ten en cuenta que esto es una combinación de avance rápido.</p>
+
+            <h4>¿Cómo realizar un merge en git?</h4>
+            <p>git checkout master <br>
+                git merge cabecera</p>
+
+    </div>
 
 </body>
 
