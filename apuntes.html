@@ -135,10 +135,25 @@
             fusionar. Por lo general, esta es la rama principal. Luego, emplea git merge y especifica el nombre de la
             otra rama que deseas traer a esta rama. Ten en cuenta que esto es una combinación de avance rápido.</p>
 
-            <h4>¿Cómo realizar un merge en git?</h4>
-            <p>git checkout master <br>
-                git merge cabecera</p>
+        <h4>¿Cómo realizar un merge en git?</h4>
+        <p>git checkout master <br>
+            git merge cabecera</p>
 
+        <h4 class="subtitulos">Clase 17 - Resolución de conflictos al hacer un merge</h4>
+        <p>Git nunca borra nada, a menos que nosotros se lo indiquemos. Cuando usamos los comandos git merge o git
+            checkout estamos cambiando de rama o creando un nuevo commit, no borrando ramas ni commits (recuerda que
+            puedes borrar commits con git reset y ramas con git branch -d).</p>
+        <h4>Cómo revertir un merge</h4>
+        <p>git merge --abort</p>
+        <h4>Conflictos en repositorios remotos</h4>
+        <p>En el trabajo colaborativo con otros, es esencial utilizar un repositorio remoto. Se puede copiar un
+            repositorio remoto al directorio local con "git clone <url>" y enviar cambios con "git push". Para
+                actualizar el repositorio local, se usa "git fetch" seguido de "git merge". Para realizar ambas acciones
+                en un solo comando, se emplea "git pull". Facilitando la creación de commits, se combina "git add" y
+                "git commit -m" con "git commit -am". La creación y cambio entre ramas se logra con "git branch <nombre>
+                    " y "git checkout <branch>" respectivamente. Después de realizar cambios en una rama, se fusionan
+                        con "git merge", transformando esa rama en la principal. Los merges, que son commits, pueden
+                        generar conflictos que requieren solución manual.</p>
     </div>
 
 </body>
