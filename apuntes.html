@@ -177,7 +177,21 @@
             ver los archivos.</p>
         </p>
     </div>
-    
+    <div>
+        <h3 class="subtitulos">Clase 19 - Configura tus llaves SSH en local</h3>
+        <h4>Cómo generar tus llaves SSH</h4>
+        <h5>1. Generar tus llaves SSH**</h5>
+        <p>Recuerda que es muy buena idea proteger tu llave privada con una contraseña.
+            <br>
+            ssh-keygen -t rsa -b 4096 -C "tu@email.com"
+        </p>
+        <h5>2. Terminar de configurar nuestro sistema.</h5>
+        <p>- Encender el “servidor” de llaves SSH de tu computadora: <br>
+            eval $(ssh-agent -s) <br><br>
+            - Añadir tu llave SSH a este “servidor”: <br>
+            ssh-add ruta-donde-guardaste-tu-llave-privada</p>
+    </div>
+
 </body>
 
 </html>
