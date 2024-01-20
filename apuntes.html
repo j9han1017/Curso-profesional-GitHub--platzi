@@ -191,6 +191,54 @@
             - Añadir tu llave SSH a este “servidor”: <br>
             ssh-add ruta-donde-guardaste-tu-llave-privada</p>
     </div>
+    <div>
+        <h3 class="subtitulos">Clase 20 - Uso de GitHub</h3>
+        <p>
+            GitHub es una plataforma que facilita el almacenamiento de repositorios de Git. Permite operar visualmente,
+            evitando la consola de comandos. Después de crear una cuenta, se pueden crear o importar repositorios,
+            formar organizaciones, contribuir a proyectos y más. <br>
+            <br>
+            El README.md es crucial para describir proyectos y sus instrucciones. <br>
+            <br>
+            Para clonar un repositorio desde GitHub, se copia la URL y se ejecuta "git clone + URL" para descargar la
+            versión del proyecto. Esto es útil para quienes desean contribuir.
+        </p>
+    </div>
+    <h4>Cómo conectar un repositorio de GitHub a nuestro documento local</h4>
+    <p>
+        Si queremos conectar el repositorio de GitHub con nuestro repositorio local, que creamos usando el comando git
+        init, debemos ejecutar las siguientes instrucciones: <br>
+<br>
+        1.Guardar la URL del repositorio de GitHub con el nombre de origin <br>
+        <u>git remote add origin URL</u> <br>
+         <br>
+        
+        2.Verificar que la URL se haya guardado correctamente: <br>
+        <u>git remote</u><br>
+        <u>git remote -v</u> <br>
+        <br>
+        
+        3.Traer la versión del repositorio remoto y hacer merge para crear un commit con los archivos de ambas partes.
+        Podemos usar git fetch y git merge o solo git pull con el flag --allow-unrelated-histories: <br>
+        <u>git pull origin master --allow-unrelated-histories</u> <br>
+        <br>
+
+        4.Por último, ahora sí podemos hacer git push para guardar los cambios de nuestro repositorio local en GitHub:
+        git push origin master <br>
+    </p>
+    <h4>Cómo autenticarte en GitHub 2022</h4>
+    <p>Para autenticarte en GitHub en 2022 y cambiar a la nueva convención 'main' en lugar de 'master':
+<br> <br>
+        1. Renombra la rama 'máster' a 'main': `git branch -M main`
+        <br> <br>
+        2. Crea un token de acceso personal: <br>
+           - Ingresa a tu cuenta de GitHub. <br>
+           - Ve a Settings -> Developer settings -> Personal access tokens. <br>
+           - Genera un nuevo token con permisos 'repo'. <br>
+        <br>
+        Utiliza este token en lugar de tu contraseña para operaciones como push.</p>
+
+
 
 </body>
 
