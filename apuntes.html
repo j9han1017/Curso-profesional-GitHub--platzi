@@ -258,10 +258,49 @@
             usuario y contraseña constantemente. Accede a la Configuración de Llaves SSH en GitHub, crea una nueva llave
             con nombre y contenido de la llave pública. Actualiza la URL del repositorio remoto para usar SSH en lugar
             de HTTPS. <br><br>
-           <u>git remote set-url origin url-ssh-del-repositorio-en-github</u> 
+            <u>git remote set-url origin url-ssh-del-repositorio-en-github</u>
         </p>
         <h4>Comandos para copiar la llave SSH:</h4>
-        <p><u>clip < ~/.ssh/id_rsa.pub</u></p>
+        <p><u>clip < ~/.ssh/id_rsa.pub</u>
+        </p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 23 - Git tag y versiones en Github </h3>
+        <p>En Git, las etiquetas o Git tags tienen un papel importante al asignar versiones a los commits más
+            significativos de un proyecto. Aprender a utilizar el comando git tag, entender los diferentes tipos de
+            etiquetas, cómo crearlas, eliminarlas y compartirlas, es esencial para un flujo de trabajo eficiente.</p>
+
+        <h4>Creación de etiquetas en Git</h4>
+        <p>Para crear una etiqueta, ejecuta el siguiente comando: <br>
+            <br>
+            git tag tagname <br>
+            Sustituye tagname con un identificador semántico que refleje el estado del repositorio en el momento
+            de la creación. Git admite etiquetas anotadas y ligeras. <br>
+            <br>
+            Las etiquetas anotadas almacenan información adicional como la fecha, etiquetador y correo
+            electrónico, y son ideales para publicaciones públicas. Las etiquetas ligeras son más simples y se
+            emplean como “marcadores” de una confirmación específica.
+        </p>
+        <h4>Listado de etiquetas</h4>
+        <p>Para obtener una lista de etiquetas en el repositorio, ejecuta el siguiente comando: <br>
+            <br>
+            git tag <br>
+            Esto mostrará una lista de las etiquetas existentes, como: <br>
+            <br>
+            v1.0 <br>
+            v1.1 <br>
+            v1.2 <br>
+            Para perfeccionar la lista, puedes utilizar opciones adicionales, como -l con una expresión comodín.
+        </p>
+
+        <h4>Uso compartido de etiquetas</h4>
+        <p>Compartir etiquetas requiere un enfoque explícito al usar el comando git push. Por defecto, las etiquetas no
+            se envían automáticamente. Para enviar etiquetas específicas, utiliza: <br>
+<br>
+            git push origin tagname <br>
+                Para enviar varias etiquetas a la vez, usa: <br>
+
+                git push origin --tags</p>
     </div>
 
 
