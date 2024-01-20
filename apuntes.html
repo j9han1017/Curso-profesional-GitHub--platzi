@@ -208,16 +208,16 @@
     <p>
         Si queremos conectar el repositorio de GitHub con nuestro repositorio local, que creamos usando el comando git
         init, debemos ejecutar las siguientes instrucciones: <br>
-<br>
+        <br>
         1.Guardar la URL del repositorio de GitHub con el nombre de origin <br>
         <u>git remote add origin URL</u> <br>
-         <br>
-        
+        <br>
+
         2.Verificar que la URL se haya guardado correctamente: <br>
         <u>git remote</u><br>
         <u>git remote -v</u> <br>
         <br>
-        
+
         3.Traer la versión del repositorio remoto y hacer merge para crear un commit con los archivos de ambas partes.
         Podemos usar git fetch y git merge o solo git pull con el flag --allow-unrelated-histories: <br>
         <u>git pull origin master --allow-unrelated-histories</u> <br>
@@ -228,15 +228,41 @@
     </p>
     <h4>Cómo autenticarte en GitHub 2022</h4>
     <p>Para autenticarte en GitHub en 2022 y cambiar a la nueva convención 'main' en lugar de 'master':
-<br> <br>
+        <br> <br>
         1. Renombra la rama 'máster' a 'main': `git branch -M main`
         <br> <br>
         2. Crea un token de acceso personal: <br>
-           - Ingresa a tu cuenta de GitHub. <br>
-           - Ve a Settings -> Developer settings -> Personal access tokens. <br>
-           - Genera un nuevo token con permisos 'repo'. <br>
+        - Ingresa a tu cuenta de GitHub. <br>
+        - Ve a Settings -> Developer settings -> Personal access tokens. <br>
+        - Genera un nuevo token con permisos 'repo'. <br>
         <br>
-        Utiliza este token en lugar de tu contraseña para operaciones como push.</p>
+        Utiliza este token en lugar de tu contraseña para operaciones como push.
+    </p>
+
+    <h3 class="subtitulos">Clase 21 - Cambios en GitHub: de master a main</h3>
+    <p>El escritor argentino Julio Cortázar sostiene que las palabras tienen color y peso, y aunque los sinónimos
+        existen, no expresan lo mismo. Feo no es igual a desagradable, al igual que aromático no es lo mismo que
+        oloroso.
+        <br><br>
+        En el contexto del curso profesional de Git & GitHub, desde el 1 de octubre de 2020, GitHub cambió el nombre de
+        la rama principal de "master" a "main". Este cambio surgió tras una reflexión profunda impulsada por el
+        movimiento #BlackLivesMatter. La tecnología ha empleado términos como master, slave, blacklist o whitelist, y se
+        espera que evolucionen.
+        <br><br>
+        Las palabras importan, y a partir de ahora, cuando escuches a Freddy mencionar "master", se refiere a "main".
+    </p>
+    <div>
+        <h3 class="subtitulos">Clase 22 - Tu primer push</h3>
+        <p>La creación de claves SSH es un paso único por cada computadora para conectar a GitHub de manera segura.
+            Después de generar las llaves, proporcionamos la llave pública a GitHub para autenticación sin ingresar
+            usuario y contraseña constantemente. Accede a la Configuración de Llaves SSH en GitHub, crea una nueva llave
+            con nombre y contenido de la llave pública. Actualiza la URL del repositorio remoto para usar SSH en lugar
+            de HTTPS. <br><br>
+           <u>git remote set-url origin url-ssh-del-repositorio-en-github</u> 
+        </p>
+        <h4>Comandos para copiar la llave SSH:</h4>
+        <p><u>clip < ~/.ssh/id_rsa.pub</u></p>
+    </div>
 
 
 
