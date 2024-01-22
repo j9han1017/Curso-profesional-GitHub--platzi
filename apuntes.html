@@ -339,16 +339,45 @@
                 Repositorio > Settings > Collaborators</p>
             <img src="https://static.platzi.com/media/user_upload/collaborator-ccc98946-723f-4866-bd45-babd1163d987.jpg"
                 alt="imagen" id="imagen">
-                <p>Si, como colaborador, agregaste erróneamente el mensaje del commit, lo puedes cambiar de la siguiente manera: <br><br>
+            <p>Si, como colaborador, agregaste erróneamente el mensaje del commit, lo puedes cambiar de la siguiente
+                manera: <br><br>
 
-                    - Hacer un commit con el nuevo mensaje que queremos, esto nos abre el editor de texto de la terminal: <br>
-                    git commit —amend <br>
-                    - Corregimos el mensaje <br>
-                    - Traer el repositorio remoto <br>
-                    git pull origin master <br>
-                    - Ejecutar el cambio <br>
-                    git push --set-upstream origin master</p>
+                - Hacer un commit con el nuevo mensaje que queremos, esto nos abre el editor de texto de la terminal:
+                <br>
+                git commit —amend <br>
+                - Corregimos el mensaje <br>
+                - Traer el repositorio remoto <br>
+                git pull origin master <br>
+                - Ejecutar el cambio <br>
+                git push --set-upstream origin master
+            </p>
         </div>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 26 - Flujo de trabajo profesional: Haciendo merge de ramas de desarrollo a master
+        </h3>
+        <p>Para poder desarrollar software de manera óptima y ordenada, necesitamos tener un flujo
+            de trabajo profesional, que nos permita trabajar en conjunto sin interrumpir el trabajo de otros
+            desarrolladores. Una buena práctica de flujo de trabajo sería la siguiente: <br> <br>
+
+            1.Crear ramas<br>
+            2. Asignar una rama a cada programador<br>
+            3. El programador baja el repositorio con git pull origin master<br>
+            4. El programador cambia de rama<br>
+            5. El programador trabaja en esa rama y hace commits<br>
+            6. El programador sube su trabajo con git push origin #nombre_rama<br>
+            7. El encargado de organizar el proyecto baja, revisa y unifica todos los cambios</p>
+
+    </div>
+    <div>
+        <h3 class="subtitulos">Flujo de trabajo profesional con Pull requests</h3>
+        <p>En entornos profesionales, la rama master suele bloquearse, y para incorporar código, se sigue un proceso que
+            incluye code review y merge request después de la aprobación. Las pruebas se realizan en servidores de
+            staging develop antes de pasar al servidor de producción con el merge request.
+
+            En proyectos de código abierto, la colaboración se basa en pull requests (PR). Colaborar implica forkear el
+            proyecto, implementar cambios en una nueva rama, hacer un PR y esperar la aprobación o sugerencias de los
+            administradores, llamados DevOps, antes del merge en la rama principal.</p>
     </div>
 
 
