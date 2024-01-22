@@ -317,19 +317,39 @@
             proyecto.</p>
         <h4>Comandos para manejo de ramas en GitHub</h4>
         <p>Crear una rama:
-           <u>git branch branchName</u>  <br> <br>
+            <u>git branch branchName</u> <br> <br>
             Movernos a otra rama:
             <u>git checkout branchName </u><br> <br>
             Crear una rama en el repositorio local:
-           <u>git branch nombre-de-la-rama o git checkout -b nombre-de-la-rama.</u>  <br> <br>
+            <u>git branch nombre-de-la-rama o git checkout -b nombre-de-la-rama.</u> <br> <br>
             Publicar una rama local al repositorio remoto:
-           <u>git push origin nombre-de-la-rama.</u> <br> <br>
+            <u>git push origin nombre-de-la-rama.</u> <br> <br>
             Recuerda que podemos ver gráficamente nuestro entorno y flujo de trabajo local con Git utilizando el comando
             gitk. Gitk fue el primer visor gráfico que se desarrolló para ver de manera gráfica el historial de un
-            repositorio de Git.</p>
+            repositorio de Git.
+        </p>
+        <div>
+            <h3 class="subtitulos">Clase 25 - Configurar múltiples colaboradores en un repositorio de GitHub</h3>
+            <p>Por defecto, cualquier persona puede clonar o descargar tu proyecto desde GitHub, pero no pueden crear
+                commits, ni ramas. Esto quiere decir que pueden copiar tu proyecto pero no colaborar con él. Existen
+                varias formas de solucionar esto para poder aceptar contribuciones. Una de ellas es añadir a cada
+                persona de nuestro equipo como colaborador de nuestro repositorio.</p>
+            <h4>Cómo agregar colaboradores en Github</h4>
+            <p>Solo debemos entrar a la configuración de colaboradores de nuestro proyecto. Se encuentra en: <br>
+                Repositorio > Settings > Collaborators</p>
+            <img src="https://static.platzi.com/media/user_upload/collaborator-ccc98946-723f-4866-bd45-babd1163d987.jpg"
+                alt="imagen" id="imagen">
+                <p>Si, como colaborador, agregaste erróneamente el mensaje del commit, lo puedes cambiar de la siguiente manera: <br><br>
+
+                    - Hacer un commit con el nuevo mensaje que queremos, esto nos abre el editor de texto de la terminal: <br>
+                    git commit —amend <br>
+                    - Corregimos el mensaje <br>
+                    - Traer el repositorio remoto <br>
+                    git pull origin master <br>
+                    - Ejecutar el cambio <br>
+                    git push --set-upstream origin master</p>
+        </div>
     </div>
 
 
 </body>
-
-</html>
