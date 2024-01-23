@@ -370,7 +370,7 @@
 
     </div>
     <div>
-        <h3 class="subtitulos">Flujo de trabajo profesional con Pull requests</h3>
+        <h3 class="subtitulos">Clase 27 - Flujo de trabajo profesional con Pull requests</h3>
         <p>En entornos profesionales, la rama master suele bloquearse, y para incorporar código, se sigue un proceso que
             incluye code review y merge request después de la aprobación. Las pruebas se realizan en servidores de
             staging develop antes de pasar al servidor de producción con el merge request.
@@ -379,6 +379,47 @@
             proyecto, implementar cambios en una nueva rama, hacer un PR y esperar la aprobación o sugerencias de los
             administradores, llamados DevOps, antes del merge en la rama principal.</p>
     </div>
+    <div>
+        <h3 class="subtitulos">Clase 28 - Utilizando Pull Requests en GitHub</h3>
+        <p>En resumen, un Pull Request (PR) en GitHub es una herramienta que facilita a un equipo solicitar la revisión
+            y aprobación de los cambios realizados en el código antes de fusionarlos en la rama principal del
+            desarrollo, llamada "master" o "main". Al crear un PR, se inicia una conversación donde los miembros del
+            equipo pueden revisar, seguir y comentar sobre los cambios propuestos, lo que permite identificar posibles
+            errores o problemas antes de integrarlos en la rama principal. Esta práctica contribuye a mantener el
+            proyecto más limpio y estable.</p>
+        <h4>Estructura de la incorporación de cambios</h4>
+        <img src="https://static.platzi.com/media/user_upload/imagen-articlases-optimizada%20%281%29-395f58fb-b44b-4729-be7d-38549ea2a157.jpg"
+            alt="imagen Clase 28" id="imagen">
+        Resumen:
 
+        <h4>Solicitando un Pull Request:</h4>
+        <p> 1. Crea una rama paralela con `git checkout -b <rama>` antes de hacer cambios en el código para evitar
+                afectar
+                la rama principal. <br> <br>
+                2. Realiza commits con `git commit -am '<Comentario>'` después de realizar modificaciones en los
+                    archivos. <br><br>
+                    3. Sube los cambios con `git push origin <rama>` desde la rama local al repositorio remoto. <br>
+                        <br>
+                        4. Crea un Pull Request en el repositorio remoto (por ejemplo, en GitHub), seleccionando la rama
+                        principal como destino y tu rama con cambios como comparación. <br><br>
+                        5. Los revisores proporcionan feedback en la sección de comentarios del Pull Request.</p>
+
+        <h4>Aceptando un Pull Request:</h4>
+        <p>1. Si estás satisfecho con los cambios propuestos, acepta el Pull Request en GitHub. <br> <br>
+            2. Realiza el merge en la rama principal seleccionando la opción correspondiente en GitHub.</p>
+
+        <h4>Corrección de un Pull Request:</h4>
+        <p>1. Lee cuidadosamente los comentarios y feedback de los revisores. <br> <br>
+            2. Regresa a tu rama local con `git checkout rama`.<br><br>
+            3. Realiza las correcciones necesarias en los archivos basándote en los comentarios y feedback.<br><br>
+            4. Crea un nuevo commit con `git commit -am 'Comentario'`.<br><br>
+            5. Sube los cambios corregidos al repositorio remoto con `git push origin rama.<br><br>
+            6. El Pull Request se actualiza automáticamente con los cambios realizados.<br><br>
+            7. Comunica a los revisores que has realizado las correcciones y que el Pull Request
+            está listo para ser revisado nuevamente.<br><br>
+
+            <b>Recuerda que la comunicación abierta y clara con los revisores es esencial para una
+            colaboración exitosa en el proceso de revisar y aceptar Pull Requests.</b></p>
+    </div>
 
 </body>
