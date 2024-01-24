@@ -419,7 +419,70 @@
             está listo para ser revisado nuevamente.<br><br>
 
             <b>Recuerda que la comunicación abierta y clara con los revisores es esencial para una
-            colaboración exitosa en el proceso de revisar y aceptar Pull Requests.</b></p>
+                colaboración exitosa en el proceso de revisar y aceptar Pull Requests.</b>
+        </p>
     </div>
+    <div>
+        <h3 class="subtitulos">Clase 29 - Creando un Fork, contribuyendo a un repositorio</h3>
+        <h4>Forks en GitHub:</h4>
+        <p>- Los forks son una característica única de GitHub que permite crear una copia exacta de un repositorio en
+            GitHub. <br> <br>
+            - Un fork actúa como un nuevo repositorio git independiente, aunque comparte una historia común con el
+            original. <br> <br>
+            - Al realizar un fork, te conviertes en el dueño del repositorio fork, con todos los permisos para trabajar
+            en él. <br> <br>
+            - Los forks son esenciales para el modelo de desarrollo open source, permitiendo a personas contribuir a
+            proyectos sin ser colaboradores directos.</p>
 
+        <h4>Haciendo un Fork Remoto desde Consola:</h4>
+        <p>1. Al realizar un fork en GitHub, se puede hacer pull request desde el repositorio fork propio. <br><br>
+            2. Para trabajar con múltiples repositorios remotos, se puede agregar un remoto adicional desde la consola
+            con git remote add [nombre_del_remoto] [url_del_remoto]`. <br><br>
+            3. Ejemplo: `git remote add upstream https://github.com/freddier/hyperblog`. <br><br>
+            4. Se pueden realizar operaciones como pull, fetch y push con el nuevo remoto, por ejemplo: `git pull
+            [remoto] [rama] o git pull upstream master.<br><br>
+            5. Este nuevo flujo de trabajo implica hacer pull desde el remoto original (upstream) y push al
+            repositorio fork propio (origin) para enviar pull requests.</p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 30 - Haciendo deployment a un servidor</h3>
+
+        <h4>Deploy:</h4>
+        <p>- El deploy es el proceso de enviar uno o varios archivos a un servidor, que puede ser de prueba, desarrollo
+            o producción.</p>
+
+        <h4>Pasos para Deployment en un Servidor Web:</h4>
+        <p>1. Acceder a la carpeta de archivos del servidor.<br><br>
+            2. Copiar el enlace de clonación (HTTPS o SSH) del repositorio en GitHub.<br><br>
+            3. Clonar el repositorio en la carpeta deseada con el comando git clone [url].<br><br>
+            4. Realizar cambios y commits en GitHub.<br><br>
+            5. Traer las actualizaciones al repositorio local en la carpeta del servidor con `git pull [ramaRemota]
+            main.<br><br>
+            6. Proteger el archivo `.git` para garantizar la seguridad.<br><br>
+            7. La conexión entre GitHub y el servidor puede realizarse mediante herramientas como Travis (pago) o
+            Jenkins (Open source).</p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 31 - Hazme un pull request</h3>
+        <p>Esta clase fue un reto que nos propuso Fredy Vegga de hacer un pull request a su repositorio</p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 32 - Ignorar archivos en el repositorio con .gitignore</h3>
+        <p>No todos los archivos deben ser incluidos en un repositorio debido a razones de seguridad y eficiencia en el
+            desarrollo. Archivos como contraseñas (.env), blobs grandes y archivos generados por comandos (por ejemplo,
+            node_modules) no deben ser compartidos públicamente ni ralentizar el proceso de desarrollo. Para evitar la
+            inclusión de estos archivos no deseados, se utiliza un archivo llamado .gitignore en la raíz del
+            repositorio, que contiene reglas para especificar qué archivos deben ser ignorados al realizar commits. Esto
+            asegura que ciertos archivos sensibles o innecesarios no se suban al repositorio.
+        </p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 33 - Readme.md es una excelente práctica</h3>
+        <p>El archivo README.md es un componente esencial en un proyecto, destinado a explicar su propósito, cómo
+            utilizarlo y cualquier otra información relevante. Escrito en Markdown, un estándar de formato de texto, los
+            README.md son comúnmente utilizados en plataformas como GitHub, Platzi y Wikipedia. Aunque estos archivos
+            pueden ubicarse en diversas carpetas, el más crucial se encuentra en la raíz del proyecto, proporcionando
+            información clave para los colaboradores. Es importante destacar que solo los archivos README.md se
+            mostrarán automáticamente en GitHub.</p>
+    </div>
 </body>
