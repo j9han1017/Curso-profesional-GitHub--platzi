@@ -390,7 +390,7 @@
         <h4>Estructura de la incorporación de cambios</h4>
         <img src="https://static.platzi.com/media/user_upload/imagen-articlases-optimizada%20%281%29-395f58fb-b44b-4729-be7d-38549ea2a157.jpg"
             alt="imagen Clase 28" id="imagen">
-        Resumen:
+
 
         <h4>Solicitando un Pull Request:</h4>
         <p> 1. Crea una rama paralela con `git checkout -b <rama>` antes de hacer cambios en el código para evitar
@@ -484,5 +484,49 @@
             pueden ubicarse en diversas carpetas, el más crucial se encuentra en la raíz del proyecto, proporcionando
             información clave para los colaboradores. Es importante destacar que solo los archivos README.md se
             mostrarán automáticamente en GitHub.</p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 34 - Tu sitio web público con GitHub Pages</h3>
+        <p>GitHub Pages es un servicio gratuito de hosting de GitHub que permite mostrar en tiempo real el contenido de
+            un repositorio en la web. Aquí hay un resumen de los pasos para subir un repositorio a GitHub Pages:
+            <br><br>
+
+            1. Obtén una llave SSH y clona el repositorio en tu computadora local utilizando el comando `git clone
+            #SSHexample`.<br><br>
+
+            2. Accede a la carpeta recién creada en tu máquina local.<br><br>
+
+            3. Crea un nuevo archivo llamado `index.html` para tu proyecto.<br><br>
+
+            4. Guarda los cambios, realiza un `git pull` para obtener las actualizaciones más recientes y luego haz un
+            `git push` a la rama `master`.<br><br>
+
+            5. Dirígete a las opciones de configuración (settings) del repositorio en GitHub. En la sección de GitHub
+            Pages, elige la rama `master` como fuente para el sitio.<br><br>
+
+            6. Guarda los cambios en la configuración.<br><br>
+
+            Después de completar estos pasos, podrás ver tu proyecto en la web mediante GitHub Pages, como si tuvieras
+            tu propio servidor. El contenido de tu repositorio estará accesible en tiempo real a través de una URL
+            proporcionada por GitHub Pages.</p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 35 - Git Rebase: reorganizando el trabajo realizado</h3>
+        <p>Rebase es el proceso de mover o combinar confirmaciones en una nueva base. Para reorganizar la rama `feature`
+            sobre `master`, ejecuta: <br><br>
+
+            
+            git checkout feature<br>
+            git rebase master<br><br>
+           
+
+            Luego, para fusionar, cambia a `master` y ejecuta:<br><br>
+
+            git checkout master<br>
+            git rebase feature<br><br>
+            
+
+            Es crucial evitar reorganizar confirmaciones en repositorios remotos, ya que puede afectar el historial
+            compartido. El rebase se considera una mala práctica en ese contexto.</p>
     </div>
 </body>
