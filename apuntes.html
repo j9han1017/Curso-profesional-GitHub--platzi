@@ -643,4 +643,43 @@
             y luego aplica Git Cherry Pick según sea necesario.
         </p>
     </div>
+    <div>
+        <h3 class="subtitulos">Clase 39 - Git Reset y Reflog: úsese en caso de emergencia</h3>
+        <p>
+
+            Git guarda todos los cambios, incluso los eliminados, ya que al borrar un cambio, se actualiza la punta del
+            branch. La gestión de estos cambios se realiza mediante registros de referencia o reflogs, que registran
+            cuándo se actualizaron las referencias en el repositorio local. El comando `git reflog` permite ver cómo se
+            ha modificado la historia.<br><br>
+
+            Los hash de referencia (ref) son apuntadores a commits y se utilizan en varios comandos de Git. Algunos de
+            ellos incluyen:<br><br>
+
+            1. `git checkout`: Mueve a la posición exacta del commit referenciado por la ref, sin realizar cambios.<br><br>
+
+            git checkout eff544f<br><br>
+
+            2. `git reset`: Modifica la historia del repositorio, utilizando la ref. Puede ser utilizado con diferentes
+            opciones:<br><br>
+
+            - `git reset --hard eff544f`: Pierde todo en el área de preparación (staging) y directorio de trabajo,
+            moviendo HEAD al commit `eff544f`.<br><br>
+            - `git reset --soft eff544f`: Recupera los cambios diferentes al commit `eff544f`, los agrega al área de
+            preparación y mueve HEAD al commit `eff544f`.<br><br>
+
+            3. `git merge`: Realiza un merge de un commit específico, fusionando la historia actual con el estado
+            específico del commit.<br><br>
+
+            git checkout master<br>
+            git merge eff544f<br><br>
+
+            Cuando surge un problema y se necesita retroceder al último estado funcional, se puede usar `git reset
+            HashDelHEAD`. Algunas opciones incluyen:<br><br>
+
+            - `git reset --soft HashDelHEAD`: Mantiene los cambios en el área de preparación.<br>
+            - `git reset --hard HashDelHEAD`: Resetea todo, incluyendo el área de preparación.<br><br>
+
+            Estos comandos deben ser utilizados con precaución, especialmente `git reset --hard`, ya que puede eliminar
+            cambios de manera irreversible.</p>
+    </div>
 </body>
