@@ -554,20 +554,21 @@
             - `git stash apply stash@{n}`: Aplica los cambios del stash especificado sin eliminarlo.<br><br>
 
             7. <b>Crear Rama con Stash:</b><br>
-            - `git stash branch <nombre_de_la_rama>`: Crea una rama y aplica el stash más reciente.<br>
-                - `git stash branch nombre_de_rama stash@{n}`: Crea una rama y aplica un stash específico.<br><br>
+            - `git stash branch [nombre_de_la_rama]`: Crea una rama y aplica el stash más reciente.<br>
+            - `git stash branch nombre_de_rama stash@{n}`: Crea una rama y aplica un stash específico.<br><br>
 
-                8. <b>Eliminar Stash:</b><br>
-                - `git stash drop`: Elimina el último stash.<br>
-                - `git stash drop stash@{n}`: Elimina un stash específico.<br>
-                - `git stash clear`: Elimina todos los stashes.<br>
+            8. <b>Eliminar Stash:</b><br>
+            - `git stash drop`: Elimina el último stash.<br>
+            - `git stash drop stash@{n}`: Elimina un stash específico.<br>
+            - `git stash clear`: Elimina todos los stashes.<br>
 
-                <b>Consideraciones:</b><br>
-                - El índice del stash más reciente siempre es 0.<br>
-                - Al crear un stash, toma archivos modificados y eliminados. Para incluir archivos creados, agrégales al
-                staging area.<br>
-                - Al aplicar un stash, este no se elimina automáticamente; es buena práctica eliminarlo después de su
-                uso.</p>
+            <b>Consideraciones:</b><br>
+            - El índice del stash más reciente siempre es 0.<br>
+            - Al crear un stash, toma archivos modificados y eliminados. Para incluir archivos creados, agrégales al
+            staging area.<br>
+            - Al aplicar un stash, este no se elimina automáticamente; es buena práctica eliminarlo después de su
+            uso.
+        </p>
     </div>
     <div>
         <h3 class="subtitulos">Clase 37 - Git Clean: limpiar tu proyecto de archivos no deseados</h3>
@@ -589,5 +590,57 @@
 
             Eliminar los archivos listados de no seguimiento.<br>
             $ git clean -f</p>
+    </div>
+    <div>
+        <h3 class="subtitulos">Clase 38 - Git cherry-pick: traer commits antiguos al head del branch</h3>
+        <p>
+            Git Cherry-Pick es un comando en Git que permite seleccionar y aplicar commits específicos de una rama a
+            otra sin realizar un merge completo. Este proceso facilita la incorporación precisa de cambios, siendo útil
+            en varios escenarios de desarrollo de software.<br><br>
+
+            <b>Escenarios de uso:</b><br><br>
+
+            1. <b> Colaboración en equipo:</b> Facilita el trabajo colaborativo al permitir a diferentes miembros del
+            equipo
+            seleccionar y aplicar commits específicos a sus ramas, simplificando el progreso individual.<br>
+
+            2. <b>Solución de bugs o errores:</b> Agiliza la corrección y entrega rápida de correcciones a usuarios al
+            aplicar commits de verificación en la rama principal para evitar afectar a más usuarios.<br>
+
+            3. <b>Deshacer cambios y recuperar commits perdidos:</b> Permite recuperar commits de ramas obsoletas o
+            solicitudes de extracción cerradas, utilizando comandos como git log y git reflog.<br>
+
+            <b>Cómo funciona Git Cherry Pick - Ejemplos:</b><br><br>
+
+            <img src="https://static.platzi.com/media/user_upload/git-cherry-pick-antes-1084cd3d-26ea-498b-8097-4109ca3d8d99.jpg"
+                alt="" id="imagen">
+            ```
+            <br><br>
+            Para usar Git Cherry Pick:<br>
+
+            1. Asegúrate de estar en la rama principal con `git checkout rama-principal`.<br>
+            2. Ejecuta `git cherry-pick commitSha` para aplicar el commit deseado (por ejemplo, 'f').<br><br>
+
+            El historial resultante sería:<br><br>
+
+            <img src="https://static.platzi.com/media/user_upload/git-cherry-pick-despues2-5f7c6919-c217-409f-a021-b2950183c5bd.jpg"
+                alt="" id="imagen"><br><br>
+
+            <b>Cómo deshacer en caso de conflicto:</b><br>
+
+            Si ocurren conflictos durante el cherry-pick, puedes detenerlo y volver al estado anterior con el comando
+            `git cherry-pick --abort`. Luego, realiza las correcciones necesarias en tu rama local antes de intentar el
+            cherry-pick nuevamente.<br><br>ñ
+
+
+            <b>Consejos finales:</b><br>
+
+            - Utiliza Git Cherry Pick con sabiduría para evitar duplicación de commits y complicaciones en el historial
+            de cambios.<br><br>
+            - Si abusas de este comando, podría considerarse una mala práctica en GitHub. Úsalo correctamente y
+            comprende sus implicaciones en el historial de cambios.<br><br>
+            - Si necesitas aplicar commits específicos, utiliza `git log` para encontrar las referencias de los commits
+            y luego aplica Git Cherry Pick según sea necesario.
+        </p>
     </div>
 </body>
